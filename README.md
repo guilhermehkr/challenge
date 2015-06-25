@@ -8,3 +8,8 @@ To run this set of programs you just need to run this following command inside m
 
 Conditions =>
 * Scala version 2.11.4 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_25)
+
+
+Notes:
+
+Unfortunately I couldn't manage the file correctly in memory and latency to write to file is huge. I apologise for this poor code. Anyway It was a pleasure did it so challenger. Thanks ;)
