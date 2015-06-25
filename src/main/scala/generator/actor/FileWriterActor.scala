@@ -14,9 +14,9 @@ import generator.provider.{AllOthersObservatoryProvider, FranceObservatoryProvid
 class FileWriterActor extends Actor with ActorLogging {
 
   def receive = {
-    case Message(range) =>
+    case Message(range, pathFile) =>
 
-      val printer = new PrintWriter(new FileWriter("target/data", true))
+      val printer = new PrintWriter(new FileWriter(pathFile, true))
 
       log.info( s"Start time -> ${LocalDateTime.now} - memory -> ${Runtime.getRuntime.freeMemory()}")
       range.foreach {
@@ -40,6 +40,6 @@ class FileWriterActor extends Actor with ActorLogging {
 object FileWriterActor {
   val props = Props[FileWriterActor]
 
-  case class Message(range: Range)
+  case class Message(range: Range, pathFile: String)
 }
 
